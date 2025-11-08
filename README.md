@@ -59,7 +59,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/justinbarber/masterbuilder.
+Bug reports and pull requests are welcome on GitHub at https://github.com/barberj/masterbuilder.
 
 ## License
 
