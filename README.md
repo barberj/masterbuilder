@@ -1,5 +1,6 @@
 # Masterbuilder
 
+<img src="docs/masterbuilder.png" alt="Masterbuilder" height="200px" />
 A Ruby gem for building things masterfully.
 
 ## Installation
