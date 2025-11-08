@@ -3,3 +3,25 @@ pre-commit:
     standardrb:
       glob: "*.rb"
       run: bundle exec standardrb {staged_files}
+    rspec:
+      glob: "*.rb"
+      run: |
+        CHANGED_SPECS=$(echo {staged_files} | tr ' ' '\n' | grep '^spec/' || true)
+        CHANGED_LIB=$(echo {staged_files} | tr ' ' '\n' | grep '^lib/' || true)
+        
+        SPECS_TO_RUN=""
+        if [ -n "$CHANGED_SPECS" ]; then
+          SPECS_TO_RUN="$CHANGED_SPECS"
+        fi
+        if [ -n "$CHANGED_LIB" ]; then
+          for file in $CHANGED_LIB; do
+            spec_file=$(echo "$file" | sed 's|^lib/|spec/|' | sed 's|\.rb$|_spec.rb|')
+            if [ -f "$spec_file" ]; then
+              SPECS_TO_RUN="$SPECS_TO_RUN $spec_file"
+            fi
+          done
+        fi
+        
+        if [ -n "$SPECS_TO_RUN" ]; then
+          bundle exec rspec $SPECS_TO_RUN
+        fi
