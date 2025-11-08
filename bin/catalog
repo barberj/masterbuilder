@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+
+# Change to the catalog directory and start the server
+catalog_dir = File.expand_path("../spec/catalog", __dir__)
+Dir.chdir(catalog_dir)
+
+# Start the Rails server
+exec "bin/rails", "server", "-p", "3000"

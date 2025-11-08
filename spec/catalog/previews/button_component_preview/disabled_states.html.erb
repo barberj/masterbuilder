@@ -1,0 +1,13 @@
+<div class="flex gap-4 items-center">
+  <%= render Masterbuilder::ButtonComponent.new(variant: :primary, disabled: true) do %>
+    Primary Disabled
+  <% end %>
+  
+  <%= render Masterbuilder::ButtonComponent.new(variant: :secondary, disabled: true) do %>
+    Secondary Disabled
+  <% end %>
+  
+  <%= render Masterbuilder::ButtonComponent.new(variant: :danger, disabled: true) do %>
+    Danger Disabled
+  <% end %>
+</div>

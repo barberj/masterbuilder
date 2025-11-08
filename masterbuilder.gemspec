@@ -33,4 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "standard", "~> 1.0"
   spec.add_development_dependency "capybara", "~> 3.0"
+  spec.add_development_dependency "lookbook", "~> 2.0"
+  spec.add_development_dependency "rails", "~> 8.0"
+  spec.add_development_dependency "puma", "~> 6.0"
 end

@@ -38,3 +38,8 @@ Gemfile.lock
 
 # RSpec status persistence
 .rspec_status
+
+# Catalog (Lookbook) app artifacts
+/spec/catalog/log/
+/spec/catalog/tmp/
+/spec/catalog/public/assets/
