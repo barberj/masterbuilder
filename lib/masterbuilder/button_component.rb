@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "view_component"
-
 module Masterbuilder
   class ButtonComponent < ViewComponent::Base
     VARIANTS = %i[primary secondary danger].freeze
