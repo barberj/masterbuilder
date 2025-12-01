@@ -25,15 +25,15 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Runtime dependencies
-  spec.add_dependency "view_component", "~> 3.0"
   spec.add_dependency "tailwindcss-rails", "~> 3.0"
+  spec.add_dependency "view_component", "~> 3.0"
 
   # Development dependencies
+  spec.add_development_dependency "capybara", "~> 3.0"
+  spec.add_development_dependency "lookbook", "~> 2.0"
+  spec.add_development_dependency "puma", "~> 6.0"
+  spec.add_development_dependency "rails", "~> 8.0"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "standard", "~> 1.0"
-  spec.add_development_dependency "capybara", "~> 3.0"
-  spec.add_development_dependency "lookbook", "~> 2.0"
-  spec.add_development_dependency "rails", "~> 8.0"
-  spec.add_development_dependency "puma", "~> 6.0"
 end
